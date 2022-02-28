@@ -1,0 +1,273 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Siloam.Ui.Lasa.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+
+    <%--<meta name="viewport" content="width=device-width, initial-scale=1.0" />--%>
+    <title><%: Page.Title %> - My ASP.NET Application</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="Content/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="Content/font-awesome/css/style.css" />
+   
+      <!-- Bootstrap -->
+    <link rel="stylesheet" href="Content/bootstrap.css" />
+    <link rel="stylesheet" href="Content/bootstrap.min.css" />
+    <link rel="stylesheet" href="Content/Custom.css" />
+
+    <link rel="stylesheet" href="Content/dist/css/AdminLTE.min.css" />
+    <%--<link rel="stylesheet" href="Content/dist/css/AdminLTE.css" />--%>
+    <link rel="stylesheet" href="Content/dist/css/skins/_all-skins.css" />
+
+    <!-- Datepicker -->
+    <link rel="stylesheet" href="Content/plugins/datepicker/datepicker3.css" />
+
+    <!-- Datatable -->
+    <link rel="stylesheet" href="Content/plugins/datatables/dataTables.bootstrap.css" />
+
+    <!-- Toast -->
+    <link rel="stylesheet" href="Content/plugins/toast/toastr.css" />
+
+    <!-- Bootstrap toogle -->
+    <link rel="stylesheet" href="Content/plugins/bootstrap-toggle/bootstrap-toggle.css" />
+
+    <!-- Bootstrap select -->
+    <link rel="stylesheet" href="Content/plugins/bootstrap-select/bootstrap-select.css" />
+
+    <!-- Autocomplete Search -->
+    <link rel="stylesheet" href="Content/plugins/AutoComplete/jQueryUI-AutoComplete.css" />
+
+    <!-- Roboto FOnt -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+    <style>
+        body {
+            background-color: #efefef;
+            font-family: 'Roboto', sans-serif;
+        }
+        .margin-menu {
+            margin-left: 15px;
+        }
+        .img-logo-lasa {
+            margin-right: 7px;
+            width:35px;
+        }
+        .img-logo-menu {
+            width:20px;
+            margin-left: 5px;
+        }
+        .img-logo-menu2 {
+            width:25px;
+        }
+        .pad-map{
+            padding: 5px 15px 5px 15px;
+        }
+
+        .label-username {
+            text-transform: capitalize;
+            letter-spacing: 2px;
+        }
+
+            .label-fullname{
+            text-transform: capitalize;
+            color:black;
+        }
+    </style>
+
+
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+         
+                
+                
+                <%--<asp:ScriptReference Path="~/Content/plugins/jQuery/jQuery-2.2.0.min.js" />--%>
+                <asp:ScriptReference Path="~/Content/plugins/datepicker/moment.js" />
+                <asp:ScriptReference Path="~/Content/plugins/datepicker/bootstrap-datepicker.js" />
+                <asp:ScriptReference Path="~/Content/plugins/datatables/jquery.dataTables.min.js" />
+                <asp:ScriptReference Path="~/Content/plugins/datatables/dataTables.bootstrap.min.js" />
+                <asp:ScriptReference Path="~/Content/plugins/toast/toastr.min.js" />
+                
+                <asp:ScriptReference Path="~/Content/plugins/bootstrap-toggle/bootstrap-toggle.min.js" />
+                <asp:ScriptReference Path="~/Content/plugins/bootstrap-select/bootstrap-select.js" />
+                <asp:ScriptReference Path="~/Content/plugins/AutoComplete/jQueryUI-AutoComplete.js" />
+                <asp:ScriptReference Path="~/Content/plugins/font-awesome/font-awesome-5.js" />
+                
+                
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+
+<%-- Header Master --%>
+    <div class="navbar navbar-inverse navbar-fixed-top" style="box-shadow: 0px 1px 4px #d8d8d8;  border: 0px; font-family: 'Roboto', sans-serif;">
+    <header class="main-header">
+    <!-- Logo -->
+    <a href="" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>A</b>LT</span>
+
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg" style="color:#1A2268; font-weight:600;"><img src="/Assets/Icons/ic_Lasa.svg" class="img-logo-lasa">Lasa<span style="color:#4D9B35;"> Medica</span></span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+
+         <!-- Date in navbar -->
+         <li class="notifications-menu" style="margin-right:500px;" >
+            <a>
+                <p style="color: white;" id="date-navbar">date</p>
+            </a>
+         </li>   
+         <!-- / End date in navbar -->
+
+
+
+          <!-- Messages: style can be found in dropdown.less// notifications-menu-->
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fas fa-question-circle fa-lg"></i>
+            </a>
+            <ul class="dropdown-menu">
+             <li class="header">function not available</li>
+            </ul>
+          </li>
+
+          <!-- Tasks: style can be found in dropdown.less -->
+          <li class="dropdown tasks-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+             <i class="fas fa-globe fa-lg"></i>
+              <span class="pl-1">&nbsp;EN</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">function not available</li>
+            </ul>
+          </li>
+          <!-- User Account: style can be found in dropdown.less -->
+          <li class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <img src="<%= Page.ResolveClientUrl("~/Assets/Icons/ic_doctor.jpg") %>" class="user-image" alt="User Image">
+              <asp:Label runat="server" ID="lblUsername" CssClass="label-username"> Username </asp:Label>&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
+            </a>
+            <ul class="dropdown-menu">
+                  <li class="user-header" style="background-color:#fff">
+                    <img src="<%= Page.ResolveClientUrl("~/Assets/Icons/ic_doctor.jpg") %>" class="img-circle">
+
+                    <p><asp:Label runat="server" CssClass="label-fullname" ID="lblFullname"> full name </asp:Label></p>
+                     <small><asp:Label runat="server" ID="lblEmail"> Email </asp:Label></small>
+                  </li>
+              
+                  <!-- Menu Footer-->
+                  <li class="user-footer">
+                    <div class="pull-left">
+                        <i class="fa-light fa-key-skeleton"></i>
+    <%--                  <a href="ChangePassword.aspx" style="text-decoration: none;"> Change Password</a>--%>
+                    </div>
+                    <div class="pull-right">
+                        <%-- a href="#" id="LinkButtonLogout" onclick="LinkButtonLogout_Click" class="btn btn-default btn-flat">Sign out</a>--%>
+                        <asp:LinkButton ID="LinkButtonLogout" runat="server" OnClick="LinkButtonLogout_Click">
+                          <asp:Image ID="ImageButtonLogout" ImageUrl="~/Assets/Icons/ic_logout.svg" Height="15px" runat="server" /> Sign Out
+                        </asp:LinkButton>
+                    </div>
+                  </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+<%--sidebar--%>
+
+     <aside class="main-sidebar" style="margin-top:20px;">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar" >
+    
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu">
+        <li>
+          <a href="LasaMaster.aspx">
+            <img src="/Assets/Icons/ic_PillMenu.svg" class="img-logo-menu"><span class="margin-menu">LASA Medicine List</span>
+          </a>
+        </li>
+        
+        <li>
+          <a href="#">
+            <img src="/Assets/Icons/ic_PillMenu2.png" class="img-logo-menu2"><span class="margin-menu">Another Menu 1</span>
+          </a>
+        </li>
+
+          <li>
+          <a href="#">
+            <img src="/Assets/Icons/ic_PillMenu2.png" class="img-logo-menu2"><span class="margin-menu">Another Menu 2</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+    </aside>
+        </div>
+        <%-- End Of Header Master --%>
+
+      <div class="content-wrapper">
+        <!-- Main content -->
+        <div class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                    </asp:ContentPlaceHolder>               
+              </div>
+         </div>  
+        </div>
+      </div>
+       
+    <!-- /.content -->
+  </div>
+  </div>
+
+    </form>
+
+    <script type="text/javascript">
+        var date = document.getElementById("date-navbar");
+        var d = new Date();
+        date.innerHTML = moment(d).format('dddd, D MMMM  YYYY');
+    </script>
+</body>
+</html>

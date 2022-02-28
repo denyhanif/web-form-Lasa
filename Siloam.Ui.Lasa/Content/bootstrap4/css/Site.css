@@ -1,0 +1,66 @@
+﻿.background {
+    background-image: url('../../../Assets/Background/Bg1-login.png');
+    background-size: cover;
+    background-repeat:no-repeat;
+    height:100vh;
+}
+.container-form {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 8px 16px #00000026;
+    border-radius: 8px;
+    opacity: 1;
+    margin-top: 25vh;
+    width: 392px;
+    height: 299px;
+    padding-left:25px;
+    padding-right:25px;
+    padding-top:24px;
+    padding-bottom:24px;
+}
+
+.label-login {
+    
+    padding-top:10px;
+    margin-left:auto;
+    text-align: center;
+    font: normal normal bold 30px/36px Helvetica;
+    letter-spacing: 0px;
+    color: #1A2268;
+    opacity: 1;
+}
+.btn-login {
+    
+    top: 500px;
+    left: 468px;
+    width: 342px;
+    height: 40px;
+    /* UI Properties */
+    background: #2A3593 0% 0% no-repeat padding-box;
+    border-radius: 30px;
+    opacity: 1;
+    color: white;
+}
+
+.for-pass {
+    /*position:absolute;*/
+    /*border: 1px solid black;*/
+    padding-bottom:0;
+    text-align:right;
+   margin-top:4px;
+   
+    text-align: right;
+    font: normal normal normal 12px/17px Helvetica;
+    letter-spacing: 0.29px;
+    color: #4D9B35;
+    opacity: 1;
+}
+.icon {
+    /* Layout Properties */
+    top: 296px;
+    left: 484px;
+    width: 20px;
+    height: 20px;
+    /* UI Properties */
+    background: transparent url('../../../Assets/Background/avatar.jpg') 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
